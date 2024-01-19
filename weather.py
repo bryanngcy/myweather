@@ -14,6 +14,7 @@ def get_weather(city):
     result = sock.read()
     sock.close()
     weather = json.loads(result)
+    print(weather)
     return weather["main"]["temp"] - 273.15
 
 def postal_lookup(postal_code):
